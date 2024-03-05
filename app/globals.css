@@ -1,4 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karantina:wght@300;400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.hero-bg {
+    background-image: 
+      url('/images/home.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+
+.about-bg {
+    background-image: linear-gradient(180deg, #001826 0%, #0A1813 0%, rgba(0, 37, 49, 0.00) 100%),
+      url('//images/about.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% 50%;
+    }

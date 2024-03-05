@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "src": "/images/gallery1.jpg",
+      "alt": "mountainous-landscape"
+    },
+    {
+      "id": 2,
+      "src": "/images/gallery2.jpg",
+      "alt": "mountains-with-trees-and-house"
+    },
+    {
+      "id": 3,
+      "src": "/images/gallery3.jpg",
+      "alt": "lake-in-mountains"
+    }
+  ]
