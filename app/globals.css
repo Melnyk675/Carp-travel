@@ -14,9 +14,34 @@
     }
 
 .about-bg {
-    background-image: linear-gradient(180deg, #001826 0%, #0A1813 0%, rgba(0, 37, 49, 0.00) 100%),
-      url('//images/about.png');
+    background-image: 
+      url('/images/about.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 20% 50%;
+    background-position: center;
     }
+
+.career-bg {
+     background-image: linear-gradient(180deg, #001826 0%, #0A1813 0%, rgba(0, 37, 49, 0.00) 100%),
+       url('/images/career.png');
+     background-repeat: no-repeat;
+     background-position: center;
+      }
+
+ .gallery-bg {
+    background-color: #001826;
+    background-image: linear-gradient(180deg, #001826 0%, #0A1813 0%, rgba(2, 15, 8, 0.85) 100%, rgba(0, 37, 49, 0.00) 100%),
+      url('/images/gallery.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+      }
+      
+ .contacts-bg {
+    background: linear-gradient(180deg, #001826 0%, #0A1813 0%, rgba(2, 15, 8, 0.75) 100%, rgba(0, 37, 49, 0.00) 100%), url('/contact-bg.png'),
+      url('/images/contacts.png');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+      }

@@ -10,7 +10,16 @@ const config: Config = {
     screens: {
       sm: '480px',
       md: '768px',
-      lg: '1280px',
+      xl: '1280px',
+    },
+    container: {
+      padding: {
+        default: '1.25rem',
+        md: '2rem',
+        xl: '1.5rem',
+        '2xl': '6rem',
+      },
+      center: true,
     },
     colors: {
       white: '#FFFFFF',
