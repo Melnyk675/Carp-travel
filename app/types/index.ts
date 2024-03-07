@@ -13,13 +13,7 @@ export enum SelectedPage {
     label: string;
     type: "button" | "submit" | "reset" | undefined;
     aria?: string;
-  };
-  
-  export type GalleryProps = {
-    swiperReady: boolean;
-    prevBtnRef: React.RefObject<HTMLButtonElement>;
-    nextBtnRef: React.RefObject<HTMLButtonElement>;
-  };
+  }
   
   export interface ServicesSlideInfoProps {
     item: {
@@ -33,3 +27,12 @@ export enum SelectedPage {
     activeSlide?: number;
     handleMenuButtonClick?: (slideIndex: number) => void;
   }
+
+  export type GalleryProps = {
+    swiperReady: boolean;
+    prevBtnRef: React.RefObject<HTMLButtonElement>;
+    nextBtnRef: React.RefObject<HTMLButtonElement>;
+  };
+
+
+
