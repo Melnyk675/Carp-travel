@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Navbar from './Navbar';
+import MenuMob from './MenuMob';
 import logo from '/public/images/logo.png';
 
 const Header = () => {
@@ -17,8 +19,10 @@ const Header = () => {
   };
 
   return (
-    <div>
-        <Link href="./">
+    <>
+    <header className="bg-transparent absolute w-full py-8 md:py-6 ">
+      <div className="container flex justify-between items-center">
+        <Link href="/">
           <Image 
            src={logo}
            height={22}
@@ -26,22 +30,22 @@ const Header = () => {
            alt="Logo CarpTravel"
            priority={true}
           />
-          <p className="font-['Karantina'] text-[14px] font-normal leading-[1.2]">C a r p T r a v e l</p>
+          <p className="font-['Karantina'] text-white text-[14px] font-normal leading-[1.2]">C a r p T r a v e l</p>
         </Link>
    
         <button
           type="button"
-          className="md:hidden uppercase text-[14px] font-normal tracking-[1.4px] hover:font-bold focus:font-bold"
-
-        >
+          className="block md:hidden uppercase text-white text-[14px] font-normal tracking-[1.4px] hover:font-bold focus:font-bold"
+          onClick={openMobileMenu}
+      >
           Menu
         </button>
+        <Navbar />
+     </div>
+    </header>
 
-
-     
-
-    </div>
-    
+    <MenuMob isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
+    </>
   )
 }
 

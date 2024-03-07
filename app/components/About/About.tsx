@@ -8,7 +8,7 @@ const About = () => {
   return (
    <section id="about" className="about-bg">
     <div className="container grid gap-2 md:grid-cols-[218px_266px_220px] md:grid-rows-[240px_180px_116px] md:gap-x-0 md:gap-y-4 lg:grid-cols-[50%_25%_25%] lg:grid-rows-[256px_192px_120px]">
-    <Title
+       <Title
           title={title}
           accent={titleAccent}
           className="text-white md:col-start-1 md:col-end-3 xl:col-end-2"
