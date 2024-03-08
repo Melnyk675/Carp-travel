@@ -1,47 +1,49 @@
-import React from 'react';
-import about from '../../data/about.json';
-import Title from '../Title';
+'use client';
 
-const About = () => {
-  const { title, titleAccent, description, quote } = about;
+import React from 'react';
+import { SelectedPage } from '../../types/index';
+
+type Props = {
+  children?: React.ReactNode;
+  setSelectedPage: (value: SelectedPage) => void;
+}
+
+const About = ({ setSelectedPage }: Props) => {
 
   return (
-   <section id="about" className="about-bg">
-    <div className="container grid gap-2 md:grid-cols-[218px_266px_220px] md:grid-rows-[240px_180px_116px] md:gap-x-0 md:gap-y-4 lg:grid-cols-[50%_25%_25%] lg:grid-rows-[256px_192px_120px]">
-       <Title
-          title={title}
-          accent={titleAccent}
-          className="text-white md:col-start-1 md:col-end-3 xl:col-end-2"
-        />
-       {description.map(({ textAccent, text }, index) => (
-          <p
-            key={index}
-            className={`font-extralight text-white ${
-              index === 2
-                ? 'row-start-5 md:row-start-3 md:col-start-2 md:col-span-2 md:self-end xl:col-start-1 xl:col-end-2'
-                : 'w-[180px] mb-5 md:w-full md:col-start-3 xl:col-start-2 xl:pl-6'
-            } ${index === 0 && ' md:row-start-1 md:pt-[9px] md:m-0 xl:pt-4'} ${
-              index === 1 && 'md:row-start-2'
-            }`}
-          >
-            <span className="font-normal">{textAccent}</span>
-            {text}
-          </p>
-        ))}
-        <div className="justify-self-end w-[180px] mt-5 mb-10 md:row-start-2 md:w-full md:self-end md:m-0 xl:row-start-3 xl:col-start-3 xl:pl-[13px]">
-          {quote.map((item, index) => (
-            <p
-              key={index}
-              className={`text-white ${
-                index === 2
-                  ? 'lowercase tracking-[-0.14px] font-extralight row-start-4'
-                  : 'uppercase'
-              } ${index === 1 && 'text-right'}`}
-            >
-              {item}
-            </p>
-          ))}
-        </div>
+    <section
+      id="about"
+      className='w-full h-full about-bg md:bg-left bg-no-repeat md:bg-about py-[55px] md:py-[64px] xl:py-[104px]'
+      >
+      <div className='container'>
+          <div className='flex flex-col max-w-full md:items-start md:flex-row mb-10 xl:mb-[72px] relative'>
+            <div className='flex flex-col h-full justify-between'>
+              <h2 className='text-7xl font-thin text-white uppercase mb-2 md:mb-auto md:mr-[18px] xl:mr-6'>Who <span className='text-white uppercase font-medium'>We Are</span></h2>
+              <div className='hidden xl:hidden md:flex w-full md:w-[180px] xl:w-[296px] justify-end xl:justify-start'>
+                <div className='flex flex-col w-[218px] absolute bottom-0 left-0'>
+                  <p className='text-white text-base font-normal leading-5 uppercase text-start'>From vacationers</p>
+                  <p className='text-white text-base font-normal leading-5 uppercase text-end'>to active travelers</p>
+                  <p className='text-white text-base font-extralight leading-6 text-start tracking-[-0.14px] xl:tracking-[2.2px]'>we have a tour for everyone.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className='max-w-[180px] md:max-w-[221px] xl:max-w-[292px] flexColumn gap-6'>
+              <p className='text-white'><b>a team of enthusiasts</b> who are fully committed to the mission of creating unforgettable and extraordinary trips to the most beautiful parts of the Carpathians. Our goal is not just to show you the natural wonders of the mountains, but to provide you with a deep immersion in their magical atmosphere.</p>
+              <p className='text-white'><b>We believe</b> that nature has the power to inspire, strengthen character and provide new perspectives. Therefore, each of our tours is aimed at unlocking your potential, enriching your spiritual world and creating unforgettable memories.</p>
+            </div>
+          </div>
+
+          <div className='flex flex-col-reverse xl:flex-row md:flex-row xl:justify-between justify-start md:justify-end'>
+            <p className='text-white md:max-w-[462px] xl:max-w-[605px]'><b>We use methods</b> that are time-tested and proven. Our expert guides with in-depth knowledge of the Carpathian landscapes lead you safely through the mysteries of these mountains. </p>
+            <div className='md:hidden xl:flex flex w-full md:w-[180px] xl:w-[296px] justify-end xl:justify-start mb-10 xl:mb-0'>
+              <div className='flex flex-col  w-[180px] lg:w-[296px]'>
+                <p className='text-white text-sm xl:text-lg font-normal leading-5 uppercase text-start'>From vacationers</p>
+                <p className='text-white text-sm xl:text-lg font-normal leading-5 uppercase text-end'>to active travelers</p>
+                <p className='text-white text-sm xl:text-lg font-extralight leading-6 text-start tracking-[-0.14px] xl:tracking-[2.1px]'>we have a tour for everyone.</p>
+              </div>
+            </div>
+          </div>
       </div>
     </section>
   )

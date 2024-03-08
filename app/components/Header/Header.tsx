@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <>
-    <header className="bg-transparent absolute w-full py-8 md:py-6 ">
+    <header className="bg-transparent absolute w-full py-8 md:py-6">
       <div className="container flex justify-between items-center">
         <Link href="/">
           <Image 

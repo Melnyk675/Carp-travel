@@ -32,7 +32,7 @@ const ContactBlock = () => {
                 href={src}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="text-[14px] leading-6 md:text-[16px] xl:text-[18px] link"
+                className="text-[14px] leading-6 md:text-[16px] xl:text-[18px]"
               >
                 {name}
               </Link>
