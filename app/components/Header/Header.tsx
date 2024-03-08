@@ -44,7 +44,6 @@ const Header = () => {
      </div>
     </header>
 
-    <MenuMob isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
     </>
   )
 }

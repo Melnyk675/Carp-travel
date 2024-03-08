@@ -16,7 +16,6 @@ type ImageType = string | { default: string; url: string };
 const JoinButton = () => {
   const [leftImage, setLeftImage] = useState<ImageType>(desktopLeft);
   const [rightImage, setRightImage] = useState<ImageType>(desktopRight);
-
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1279px)' });
 

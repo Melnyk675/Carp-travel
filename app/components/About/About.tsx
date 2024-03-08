@@ -13,7 +13,7 @@ const About = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="about"
-      className='w-full h-full about-bg md:bg-left bg-no-repeat md:bg-about py-[55px] md:py-[64px] xl:py-[104px]'
+      className='w-full h-full about-bg md:bg-left py-[55px] md:py-[64px] xl:py-[104px]'
       >
       <div className='container'>
           <div className='flex flex-col max-w-full md:items-start md:flex-row mb-10 xl:mb-[72px] relative'>
