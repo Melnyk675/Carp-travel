@@ -1,4 +1,5 @@
-
+import React, { FC } from 'react';
+import { TbDiamondsFilled } from 'react-icons/tb';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
@@ -21,11 +22,11 @@ const SlideList: React.FC<SlideListProps> = ({ activeSlide, onMenuButtonClick })
     <div className="absolute w-full py-[54px] md:py-[64px] xl:py-[104px]">
       <div className="container grid grid-rows-[394px_166px_130px] gap-y-6 md:grid-cols-[463px_221px] md:grid-rows-[80px_167px_24px_120px] md:gap-x-5 md:gap-y-8 xl:grid-cols-[607px_292px_293px] xl:grid-rows-[137px_261px_168px] xl:gap-y-0">
         <ul className="list-none p-0 flex flex-col gap-4 row-start-2 md:row-start-2 md:col-start-2 mb-5 z-[100]">
-          {menuSlider.map((item, id) => (
+          {menuSlider.map((item, index) => (
             <li
-              key={item + id}
+              key={item + index}
               className={`flex items-center uppercase text-white font-extralight cursor-pointer ${
-                id === activeSlide
+                index === activeSlide
                   ? 'opacity-100 font-medium'
                   : ' opacity-50 hover:pl-1 hover:opacity-100 transition-all duration-500 easy-in-out'
               }`}
@@ -33,8 +34,11 @@ const SlideList: React.FC<SlideListProps> = ({ activeSlide, onMenuButtonClick })
               <button
                 type="button"
                 className="flex items-center uppercase text-left"
-                onClick={() => onMenuButtonClick(id)}
-              >
+                onClick={() => onMenuButtonClick(index)}>
+              <TbDiamondsFilled
+                 size={10}
+                 className={`mr-2 ${index === activeSlide ? 'block opacity-100' : 'hidden'}`}
+              />
                 {item}
               </button>
             </li>

@@ -7,6 +7,7 @@ import { CareerFormInfo } from "../../data/careerInputs";
 import FormInputs from "../Form/FormInputs";
 import FormTextarea from "../Form/FormTextarea";
 import FormButton from "../Form/FormButton";
+import FormPolicy from "../Form/FormPolicy";
 
 const CareerForm: React.FC = () => {
   const { register, handleSubmit, reset, watch, setValue, formState: { errors } } = useForm<FormData>();
@@ -54,6 +55,11 @@ const CareerForm: React.FC = () => {
             register={register}
           />
         </div>
+        {policy &&
+          <FormPolicy
+            policy={policy}
+            register={register}/>
+        }
 
         <FormButton
           btnStyles="text-white justify-self-end mt-4 md:m-0 xl:text-[32px]"

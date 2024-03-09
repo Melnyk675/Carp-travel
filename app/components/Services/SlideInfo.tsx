@@ -53,8 +53,7 @@ const SlideInfo: FC<ServicesSlideInfoProps> = ({ item, index, activeSlide = 0, h
           className="mb-3 row-start-3 w-full md:w-[462px] md:mb-0 md:h-[370px] xl:w-[606px] xl:h-[428px]"
         />
 
-        <div
-          className={`flex md:hidden xl:pt-0 text-white text-xs font-extralight leading-6 mb-6 text-end`}
+        <div className={`flex md:hidden xl:pt-0 text-white text-xs font-extralight leading-6 mb-6 text-end`}
           style={{
             paddingTop: calculatePaddingTop(index),
           }}>
