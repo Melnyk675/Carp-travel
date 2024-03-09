@@ -1,3 +1,4 @@
+import { FormContent } from "./career";
 
 export enum SelectedPage {
     About = "about",
@@ -14,12 +15,11 @@ export enum SelectedPage {
     type: "button" | "submit" | "reset" | undefined;
     aria?: string;
   }
-  
   export interface ServicesSlideInfoProps {
     item: {
       id: string;
       img: string;
-      promo: string;
+      quote: string;
       title: string;
       description: string;
     };
@@ -34,5 +34,29 @@ export enum SelectedPage {
     nextBtnRef: React.RefObject<HTMLButtonElement>;
   };
 
+  export type Contact = {
+    name: string;
+    contacts: string[];
+  };
+  
+  export type Social = {
+    title: string;
+    link: string;
+  };
+  
+  export type Socials = {
+    name: string;
+    contacts: Social[];
+  };
+  
+  export type ContactData = {
+    phone: Contact;
+    email: Contact;
+    socials: Socials;
+  };
+  
+  export type ContactForm = {
+    formContent: FormContent;
+  };
 
 

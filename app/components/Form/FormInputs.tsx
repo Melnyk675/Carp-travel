@@ -17,7 +17,7 @@ const FormInputs: React.FC<FormInputProps> = ({
     <>
       <label
         htmlFor={inputInfo.id}
-        className={`label ${inputStyles} ${inputInfo.id === 'career-phone' ? 'phone-label' : ''}`}
+        className={`label text-white ${inputStyles} ${inputInfo.id === 'career-phone' ? 'phone-label' : ''}`}
       >
         {inputInfo.label}
       </label>

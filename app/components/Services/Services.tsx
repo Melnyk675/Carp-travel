@@ -1,16 +1,21 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Pagination, A11y, Autoplay } from 'swiper/modules';
+import { EffectFade } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
+import 'swiper/swiper-bundle.css';
 import SlideList from './SlideList';
 import SlideInfo from './SlideInfo';
+import { SelectedPage } from '../../types/index';
 import services from '../../data/services.json';
 
-const Services = () => {
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+}
+
+const Services: React.FC<Props> = () => {
   const [swiper, setSwiper] = useState<any>(null);
   const [activeSlide, setActiveSlide] = useState<number>(0);
 
@@ -29,22 +34,19 @@ const Services = () => {
   };
 
   return (
-    <>
     <section
       className="bg-opacity-75 relative"
-      data-section-id="services"
-      id="services"
-    >
+      id="services">
       <SlideList
         activeSlide={activeSlide}
         onMenuButtonClick={handleMenuButtonClick}
       />
       <Swiper
         effect={'fade'}
-        onSwiper={(s) => setSwiper(s)}
+        onSwiper={(s: any) => setSwiper(s)}
         modules={[EffectFade]}
-        slidesPerView={1}
-      >
+        slidesPerView={1}>
+          
         {services.map(item => {
           const { id, bg } = item;
 
@@ -57,14 +59,13 @@ const Services = () => {
                   background: `url(${bg}) center / cover no-repeat`,
                 }}
               >
-                <SlideInfo item={item} index={swiper ? swiper.activeIndex : 0} />
+                <SlideInfo item={item} index={swiper?.activeIndex} activeSlide={activeSlide} handleMenuButtonClick={handleMenuButtonClick} />
               </SwiperSlide>
             </div>
           );
         })}
       </Swiper>
     </section>
-  </>
   )
 }
 
