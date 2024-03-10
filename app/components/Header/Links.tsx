@@ -26,8 +26,7 @@ const Links = ({
       onClick={() => {
         setSelectedPage(lowerCasePage);
         close();
-      }}
-    >
+      }}>
       {page}
     </Link>
   )

@@ -39,7 +39,7 @@ const SlideInfo: FC<ServicesSlideInfoProps> = ({ item, index, activeSlide = 0, h
     <div className='container'>
       <div className='w-full flex flex-col md:flex-row mb-4 md:mb-10 xl:mb-5'>
         <h2 className='text-7xl font-thin uppercase text-white md:leading-none xl:leading-none leading-[56px] self-center w-full md:w-[482px] xl:w-[626px]'>We <span className='font-medium'>Offer</span></h2>
-         <p className="my-0 h-full title text-end md:text-start leading-none">
+         <p className="my-0 h-full number text-end md:text-start leading-none">
           {id}
           <span className="opacity-20">/05</span>
         </p>

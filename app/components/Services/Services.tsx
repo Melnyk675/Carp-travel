@@ -6,7 +6,6 @@ import { EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/swiper-bundle.css';
-import SlideList from './SlideList';
 import SlideInfo from './SlideInfo';
 import { SelectedPage } from '../../types/index';
 import services from '../../data/services.json';
@@ -37,10 +36,7 @@ const Services: React.FC<Props> = () => {
     <section
       className="bg-opacity-75 relative"
       id="services">
-      <SlideList
-        activeSlide={activeSlide}
-        onMenuButtonClick={handleMenuButtonClick}
-      />
+
       <Swiper
         effect={'fade'}
         onSwiper={(s: any) => setSwiper(s)}

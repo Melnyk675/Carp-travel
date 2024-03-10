@@ -13,8 +13,7 @@ const CareerForm: React.FC = () => {
   const { register, handleSubmit, reset, watch, setValue, formState: { errors } } = useForm<FormData>();
 
   useFormPersist("careerFormData", {
-    watch,
-    setValue,
+    watch, setValue,
   });
 
   const { description, formContent: { inputs, textarea, policy } } = CareerFormInfo;
@@ -28,15 +27,13 @@ const CareerForm: React.FC = () => {
       <p className="ml-auto text-white mb-9 w-[178px] text-sm font-extralight leading-5 md:ml-0 md:mb-[28px] md:w-[221px] md:text-[12px] md:leading-[20px] xl:mb-[14px] xl:w-[234px] xl:text-lg xl:leading-6">
         {description}
       </p>
-
       <form
         className="flex flex-col md:w-[464px] md:grid md:grid-cols-2 md:gap-x-7 xl:w-[606px]"
         onSubmit={handleSubmit(onSubmit)}
         aria-label="Career"
-        noValidate
-      >
-        <div className="flex flex-col">
+        noValidate>
 
+        <div className="flex flex-col">
           {inputs.map(inputInfo=>
             <div className="mb-4 flex flex-col relative md:mb-[16px] xl:mb-[26px]" key={inputInfo.id}>
               <FormInputs
@@ -64,7 +61,6 @@ const CareerForm: React.FC = () => {
         <FormButton
           btnStyles="text-white justify-self-end mt-4 md:m-0 xl:text-[32px]"
         />
-
       </form>
     </>
   )

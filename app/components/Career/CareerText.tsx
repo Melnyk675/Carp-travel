@@ -1,5 +1,4 @@
 
-import React from 'react';
 import contentData from '../../data/career.json';
 
 const CareerText = () => {
@@ -9,8 +8,8 @@ const CareerText = () => {
       <ul className='flex flex-col gap-6 gap-y-4 mr-[90px] text-right md:w-[230px] md:float-left md:gap-y-8 md:mr-0 md:mb-0 xl:w-full'>
         {contentData.map((item, index) => (
           <li key={index} className='xl:grid xl:grid-cols-2 xl:gap-y-6 xl:gap-x-6'>
-            <h3 className='text-white text-end md:mb-2 xl:mb-0 gap-2'>{item.title}</h3>
-            <p className='text-white text-end xl:text-start'>{item.description}</p>
+            <h2 className='text-white text-sm md:text-base xl:text-lg leading-5 xl:leading-6 font-medium text-end md:mb-2 xl:mb-0 gap-2'>{item.title}</h2>
+            <p className='text-white text-xs font-extralight leading-5 xl:leading-6 text-end xl:text-start'>{item.description}</p>
           </li>
         ))}
       </ul>

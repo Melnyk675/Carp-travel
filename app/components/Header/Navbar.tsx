@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useEffect } from "react";
 import Image from "next/image";
@@ -18,8 +18,11 @@ type Props = {
 const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
 
   const isAboveMediumScreens = useMediaQuery("(min-width: 768px)");
+
   const { isOpen, toggle, close } = useToggle(false);
+
   const handleKeyPress = (event: KeyboardEvent) => {
+
     if (event.key === "Escape" && isOpen) {
       close();
       event.preventDefault();
@@ -28,14 +31,17 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyPress);
+
     return () => {
       window.removeEventListener("keydown", handleKeyPress);
     };
   }, [isOpen]);
 
   useEffect(() => {
+
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      
     } else {
       document.body.style.overflow = 'auto';
     }
@@ -62,7 +68,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
 
           {isAboveMediumScreens ? (
             <div className="flex items-center justify-between">
-              <div className='flex items-center justify-center gap-6 lg:gap-[56px] text-white tracking-normal'>
+              <div className='flex items-center justify-center gap-6 xl:gap-[56px] text-white tracking-normal'>
                 <Links
                   page="About"
                   selectedPage={selectedPage}
@@ -98,9 +104,8 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
           ) : (
             <button
               aria-label="toggle menu button open"
-              className=" text-white cursor-pointer block uppercase"
-              onClick={toggle}
-            >
+              className="text-white font-normal text-sm cursor-pointer block uppercase"
+              onClick={toggle}>
               Menu
             </button>
           )}
@@ -118,7 +123,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
             </button>
           </div>
 
-          <div className="mx-auto flex flex-col items-center justify-center gap-12 text-lg h-full text-white ">
+          <div className="mx-auto flex flex-col text-white  items-center justify-center gap-12 text-lg h-full">
             <Links
               page="About"
               selectedPage={selectedPage}

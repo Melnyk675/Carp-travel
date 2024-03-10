@@ -55,7 +55,6 @@ const JoinButton = () => {
     scrollToSection('contacts');
   };
 
-
   return (
     <button
       type="button"
