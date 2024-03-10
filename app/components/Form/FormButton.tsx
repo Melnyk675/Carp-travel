@@ -1,3 +1,4 @@
+import React from "react";
 
 const FormButton: React.FC<{ btnStyles: string }> = ({
     btnStyles

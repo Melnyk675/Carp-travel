@@ -12,7 +12,7 @@ const Contacts: React.FC<Props> = () => {
     <section className='w-full h-full md:bg-left contacts-bg py-[55px] md:py-[64px] xl:py-[104px]'
       id="contacts">
       <div className='container'>
-    <h2 className='text-7xl font-thin uppercase text-white md:leading-none leading-[56px] mb-8 xl:mb-[70px]'>Contact <span className='font-medium'>Us</span></h2>
+    <h2 className='title uppercase md:leading-none leading-[56px] mb-8 xl:mb-[70px]'>Contact <span className='font-medium'>Us</span></h2>
         
         <div className='xl:flex'>
           <ContactInfo />

@@ -10,7 +10,7 @@ import Navbar from './components/Header/Navbar';
 import Hero from './components/Hero/Hero';
 import Services from './components/Services/Services';
 
-export default function HomePage() {
+const HomePage = () => {
 
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
     SelectedPage.About
@@ -19,13 +19,17 @@ export default function HomePage() {
 
   useEffect(() => {
     const handleScroll = () => {
+
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
         setSelectedPage(SelectedPage.About);
       }
+
       if (window.scrollY !== 0) setIsTopOfPage(false);
     };
+
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -45,3 +49,4 @@ export default function HomePage() {
   )
  }
 
+ export default HomePage;

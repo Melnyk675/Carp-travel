@@ -1,5 +1,5 @@
 
-import { ContactsInfo } from "../../data/contacts";
+import { ContactsInfo } from "@/app/data/contacts";
 import { PhoneNumber } from "@/app/data/phoneNumbers";
 
 const ContactInfo: React.FC = () => {
@@ -62,7 +62,7 @@ const ContactInfo: React.FC = () => {
                 rel="noopener noreferrer"
                 target="_blank"
                 aria-label={contact.title}
-                className="text-white border-b-[1px] border-transparent transition-all duration-200 ease-in">
+                className="footer-link text-white border-transparent transition-all duration-200 ease-in">
                 {contact.title}
               </a>
             </li>

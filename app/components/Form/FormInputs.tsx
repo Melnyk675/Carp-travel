@@ -1,11 +1,9 @@
 
+import React from "react";
 import { FormInputProps, InputOptions } from '../../types/career';
 
 const FormInputs: React.FC<FormInputProps> = ({
-  inputInfo,
-  inputStyles,
-  register,
-  errors
+  inputInfo, inputStyles, register, errors
 }) => {
   const options: InputOptions = {
     required: inputInfo.required,
@@ -17,7 +15,7 @@ const FormInputs: React.FC<FormInputProps> = ({
     <>
       <label
         htmlFor={inputInfo.id}
-        className={`label text-white ${inputStyles} ${inputInfo.id === 'career-phone' ? 'phone-label' : ''}`}
+        className={`label ${inputStyles} ${inputInfo.id === 'career-phone' ? 'phone-label' : ''}`}
       >
         {inputInfo.label}
       </label>

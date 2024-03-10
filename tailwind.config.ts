@@ -14,6 +14,10 @@ const config: Config = {
       xl: '1280px',
       mdOnly: { max: "767px" },
     },
+    extend: {
+      backgroundImage: () => ({
+        invalid: "url(/icons/formError.svg)",
+      }),
     container: {
       padding: {
         default: '1.25rem',
@@ -33,5 +37,6 @@ const config: Config = {
     },
   },
   plugins: [],
+}
 };
 export default config;

@@ -39,11 +39,11 @@ const Slider = () => {
           <SwiperSlide tag="li" key={index} className="gallery-slider">
             {({ isActive }) => (
               <div
-                className={`image-wrapper relative h-[186px] transition-all duration-700 ease-[cubic-bezier(.57,.21,.69,1.25)]
+                className={`image-wrapper relative h-[186px] transition-all duration-500 ease-[cubic-bezier(.57,.21,.69,1.25)]
                 ${isActive
                     ? 'before:hidden md:h-[294px] md:w-[415px] xl:h-[429px] xl:w-[606px] opacity-1'
                     : 'md:h-[86px] md:w-[120px] xl:h-[225px] xl:w-[312px] mdOnly:before:hidden opacity-0.5'
-                  } `}>
+                  }`}>
                 <Image
                   src={img}
                   alt={alt}

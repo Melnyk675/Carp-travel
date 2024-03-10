@@ -13,7 +13,7 @@ const Hero = () => {
         </div>
 
         <div className='flex flex-col justify-between max-w-full md:max-w-[426px] xl:max-w-[646px]'>
-          <h1 className='text-7xl font-thin text-white uppercase pb-6 md:pb-[148px]'><span className='font-medium'>Uncover</span> Carpathian’s Secrets</h1>
+          <h1 className='title uppercase pb-6 md:pb-[148px]'><span className='font-medium'>Uncover</span> Carpathian’s Secrets</h1>
           <p className='text-white text-sm xl:text-base font-extralight leading-4 xl:leading-6 tracking-[1.26px] xl:tracking-[1.44px] max-w-full md:max-w-[262px] xl:max-w-full pb-6 md:p-0'>Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake / Bukovel</p>
         </div>
 

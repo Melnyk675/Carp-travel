@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { ServicesSlideInfoProps } from '../../types/index';
 import SlideList from './SlideList';
 
-const SlideInfo: FC<ServicesSlideInfoProps> = ({ item, index, activeSlide = 0, handleMenuButtonClick = () => { }}) => {
+const SlideInfo: React.FC<ServicesSlideInfoProps> = ({ item, index, activeSlide = 0, handleMenuButtonClick = () => { }}) => {
 
   const { id, img, quote, title, description } = item;
   
@@ -38,12 +38,13 @@ const SlideInfo: FC<ServicesSlideInfoProps> = ({ item, index, activeSlide = 0, h
   return (
     <div className='container'>
       <div className='w-full flex flex-col md:flex-row mb-4 md:mb-10 xl:mb-5'>
-        <h2 className='text-7xl font-thin uppercase text-white md:leading-none xl:leading-none leading-[56px] self-center w-full md:w-[482px] xl:w-[626px]'>We <span className='font-medium'>Offer</span></h2>
+        <h2 className='title uppercase md:leading-none xl:leading-none leading-[56px] self-center w-full md:w-[482px] xl:w-[626px]'>We <span className='font-medium'>Offer</span></h2>
          <p className="my-0 h-full number text-end md:text-start leading-none">
           {id}
           <span className="opacity-20">/05</span>
         </p>
       </div>
+      
       <div className='flex flex-col md:flex-row'>
         <Image
           alt={title}

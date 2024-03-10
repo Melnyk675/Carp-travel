@@ -18,7 +18,7 @@ const About = ({ setSelectedPage }: Props) => {
       <div className='container'>
           <div className='flex flex-col max-w-full md:items-start md:flex-row mb-10 xl:mb-[72px] relative'>
             <div className='flex flex-col h-full justify-between'>
-              <h2 className='text-7xl font-thin text-white uppercase mb-2 md:mb-auto md:mr-[18px] xl:mr-6'>Who <span className='text-white uppercase font-medium'>We Are</span></h2>
+              <h2 className='title uppercase mb-2 md:mb-auto md:mr-[18px] xl:mr-6'>Who <span className='text-white uppercase font-medium'>We Are</span></h2>
               <div className='hidden xl:hidden md:flex w-full md:w-[180px] xl:w-[296px] justify-end xl:justify-start'>
                 <div className='flex flex-col w-[218px] absolute bottom-0 left-0'>
                   <p className='text-white text-base font-normal leading-5 uppercase text-start'>From vacationers</p>

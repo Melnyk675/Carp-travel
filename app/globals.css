@@ -39,13 +39,10 @@ select {
 p,
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3
+ {
   overflow-wrap: break-word;
 }
-
 
 .hero-bg {
     background-image: 
@@ -93,12 +90,6 @@ h6 {
     background-size: cover;
     background-position: center;
       }
-
-   img {
-     display: block;
-     max-width: 100%;
-     height: auto;
-   }
    
    .policy-check {
     position: absolute;
@@ -231,7 +222,7 @@ h6 {
     }
     
     .gallery-slider.swiper-slide {
-      @apply lg:opacity-0;
+      @apply xl:opacity-0;
     }
   
    
@@ -253,6 +244,10 @@ h6 {
 
 
   .number {
+    @apply text-[40px] md:text-[66px] xl:text-[98px] font-thin text-white tracking-[-1.6px] md:tracking-[-2.68px] xl:tracking-[-3.92px] uppercase;
+  }
+
+  .title {
     @apply text-[40px] md:text-[66px] xl:text-[98px] font-thin text-white tracking-[-1.6px] md:tracking-[-2.68px] xl:tracking-[-3.92px] uppercase;
   }
 
@@ -284,4 +279,23 @@ h6 {
   .footer-link:hover::after,
   .footer-link:focus::after {
     width: 100%;
+  }
+
+  .input {
+    @apply px-2 py-[2px] w-full block bg-white bg-opacity-5 text-white text-[12px] font-extralight leading-6 outline-none 
+ hover:bg-opacity-10 placeholder:text-white placeholder:opacity-[0.2]
+ md:w-[222px] xl:w-[290px] xl:text-[20px] xl:leading-6 transition-all ease-in duration-200;
+  }
+
+  .label {
+    @apply text-white mb-1 text-xs font-extralight leading-[24px] tracking-[2.4px];
+  }
+
+  .validation-error {
+    @apply absolute bottom-[-24px] right-0 text-orange text-xs font-extralight leading-6 tracking-[2.4px]
+    before:w-[18px] before:h-[18px] before:absolute before:left-[-22px] before:top-1/2 before:translate-y-[-50%];
+  }
+
+  .invalid-input {
+    @apply text-orange text-opacity-100 z-20;
   }
