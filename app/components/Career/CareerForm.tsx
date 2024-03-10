@@ -24,7 +24,7 @@ const CareerForm: React.FC = () => {
 
   return (
     <>
-      <p className="ml-auto text-white mb-9 w-[178px] text-sm font-extralight leading-5 md:ml-0 md:mb-[28px] md:w-[221px] md:text-[12px] md:leading-[20px] xl:mb-[14px] xl:w-[234px] xl:text-lg xl:leading-6">
+      <p className="ml-auto text-white mb-9 w-[178px] text-sm font-extralight leading-5 md:ml-0 md:mb-7 md:w-[220px] md:text-[12px] md:leading-5 xl:mb-3.5 xl:w-[234px] xl:text-lg xl:leading-6">
         {description}
       </p>
       <form
@@ -34,7 +34,7 @@ const CareerForm: React.FC = () => {
         noValidate>
 
         <div className="flex flex-col">
-          {inputs.map(inputInfo=>
+          {inputs.map(inputInfo =>
             <div className="mb-4 flex flex-col relative md:mb-[16px] xl:mb-[26px]" key={inputInfo.id}>
               <FormInputs
                 inputInfo={inputInfo}
@@ -52,6 +52,7 @@ const CareerForm: React.FC = () => {
             register={register}
           />
         </div>
+
         {policy &&
           <FormPolicy
             policy={policy}

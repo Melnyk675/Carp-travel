@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SelectedPage } from '../../types/index';
 import CareerText from './CareerText';
 import CareerForm from './CareerForm';
@@ -41,9 +41,9 @@ const Career: React.FC<Props> = () => {
     <>
      <section 
       id="career" 
-      className="career-bg w-full md:bg-no-repeat md:py-[64px] xl:py-[104px] py-[55px]">
+      className="career-bg w-full md:py-[64px] xl:py-[104px] py-[55px]">
        <div className='container'>
-         <div className='flex flex-col '>
+         <div className='flex flex-col'>
            <div className='flex flex-col items-end md:flex-row md:justify-between mb-8 md:mb-3 xl:mb-6'>
              <h2 className='text-7xl font-thin uppercase w-full md:w-auto text-white md:leading-none leading-[56px] mb-6 md:mb-0 md:items-center self-center'>Choose  <span className='font-medium'>Us</span></h2>
               <p className='w-[176px] text-start text-white font-extralight text-sm md:text-[12px] xl:text-lg md:w-[220px] md:text-justify ml-auto md:ml-0 xl:w-[292px]'>
@@ -67,7 +67,7 @@ const Career: React.FC<Props> = () => {
       {isMobile && (
         <section
           id="career"
-          className="career-bg relative py-[55px] "
+          className="career bg-top relative py-[55px] "
         >
           <div className="container">
             <CareerForm />
