@@ -55,7 +55,6 @@ const Career: React.FC<Props> = () => {
 
           <div className='flex flex-col md:flex-row'>
            <CareerText />
-
             {!isMobile && (
             <CareerForm />
              
@@ -67,7 +66,7 @@ const Career: React.FC<Props> = () => {
       {isMobile && (
         <section
           id="career"
-          className="career py-[55px] "
+          className="career career-bg py-[55px]"
         >
           <div className="container">
             <CareerForm />

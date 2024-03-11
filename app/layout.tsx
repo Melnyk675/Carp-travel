@@ -1,23 +1,24 @@
 
-import { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'CarpTravel',
-  description:
-    'We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!',
+  title: "CarpTarvel",
+  description: "Travel agency website",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <main>{children}</main>
-        <div id="modal-root"></div>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
+

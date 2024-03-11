@@ -1,15 +1,11 @@
 
 import { FormTextAreaProps } from '../../types/career';
 
-const FormTextarea: React.FC<FormTextAreaProps> = ({
-  textarea,
-  textAreaStyles,
-  register
-}) => {
+const FormTextarea: React.FC<FormTextAreaProps> = ({  textarea, textAreaStyles, register }) => {
 
   return (
     <>
-      <label htmlFor={textarea.id} className="text-white">
+      <label htmlFor={textarea.id} className="label">
         {textarea.label}
       </label>
       <textarea
