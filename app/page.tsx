@@ -43,7 +43,7 @@ const HomePage = () => {
     <About setSelectedPage={setSelectedPage} />
     <Services setSelectedPage={setSelectedPage} />
     <Career setSelectedPage={setSelectedPage} />
-    <Gallery setSelectedPage={setSelectedPage} />
+    <Gallery  />
     <Contacts setSelectedPage={setSelectedPage} />
     </>
   )
