@@ -15,9 +15,9 @@ const config: Config = {
       mdOnly: { max: "767px" },
     },
     extend: {
-      backgroundImage: () => ({
-        invalid: "url(/icons/formError.svg)",
-      }),
+      backgroundImage: {
+        error: "url(/icons/error.svg)",
+      },
     container: {
       padding: {
         default: '1.25rem',

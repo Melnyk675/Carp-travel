@@ -1,5 +1,5 @@
 
-import JoinButton from "./JoinButton";
+import HeroButton from "./HeroButton";
 
 const Hero = () => {
 
@@ -26,7 +26,7 @@ const Hero = () => {
           <div>
             <p className='text text-white mb-6 md:mb-7'>We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!
             </p>
-            <JoinButton /> 
+            <HeroButton /> 
           </div>
          </div>
         </div>

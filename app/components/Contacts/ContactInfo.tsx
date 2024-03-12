@@ -20,6 +20,7 @@ const ContactInfo: React.FC = () => {
               href={`tel:${contact}`}
               rel="noopener noreferrer"
               target="_blank"
+              className="footer-link"
               key={contact}>
                 {PhoneNumber(contact)}
             </a>
@@ -40,6 +41,7 @@ const ContactInfo: React.FC = () => {
               href={`mailto:${contact}`}
               rel="noopener noreferrer"
               target="_blank"
+              className="footer-link"
               key={contact}>
               {contact}
             </a>

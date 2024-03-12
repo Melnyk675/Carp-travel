@@ -123,7 +123,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
             </button>
           </div>
 
-          <div className="mx-auto flex flex-col text-white  items-center justify-center gap-12 text-lg h-full">
+          <div className="mx-auto flex flex-col text-white items-center justify-center gap-12 text-lg h-full">
             <Links
               page="About"
               selectedPage={selectedPage}

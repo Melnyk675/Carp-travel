@@ -1,5 +1,5 @@
 
-import Link from "next/link";
+import AnchorLink from "react-anchor-link-smooth-scroll"
 import { SelectedPage } from "../../types/index";
 
 type Props = {
@@ -19,7 +19,7 @@ const Links = ({
 
 
   return (
-    <Link
+    <AnchorLink
       className={`${selectedPage === lowerCasePage ? "navLink" : ""} 
     transition duration-300 ease-in-out footer-link`}
       href={`#${lowerCasePage}`}
@@ -28,7 +28,7 @@ const Links = ({
         close();
       }}>
       {page}
-    </Link>
+    </AnchorLink>
   )
 }
 
