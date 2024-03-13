@@ -46,7 +46,7 @@ const Career: React.FC<Props> = () => {
          <div className='flex flex-col'>
            <div className='flex flex-col items-end md:flex-row md:justify-between mb-8 md:mb-3 xl:mb-6'>
              <h2 className='title uppercase w-full md:w-auto md:leading-none leading-[56px] mb-6 md:mb-0 md:items-center self-center'>Choose  <span className='font-medium'>Us</span></h2>
-              <p className='w-[176px] text-start text-white font-extralight text-sm md:text-[12px] xl:text-lg md:w-[220px] md:text-justify ml-auto md:ml-0 xl:w-[292px]'>
+              <p className='w-[178px] text-start text-white font-extralight text-sm md:text-[12px] xl:text-lg md:w-[220px] md:text-justify ml-auto md:ml-0 xl:w-[292px]'>
                 Your chance to join our passionate team in Carpathian tourism. Seeking talented professionals to share our common mission.
               </p>
             </div>
