@@ -24,7 +24,7 @@ const SlideList: React.FC<SlideListProps> = ({ activeSlide, onMenuButtonClick })
       {menuSlider.map((item, index) => (
         <li
           key={item + index}
-          className={`flex items-center uppercase text-white font-extralight cursor-pointer ${
+          className={`flex items-center uppercase text-white font-extralight text-xl leading-4 md:text-[22px] xl:text-2xl md:leading-[18px] xl:leading-6 cursor-pointer ${
             index === activeSlide
               ? 'opacity-100 font-medium'
               : 'opacity-50 hover:pl-1 hover:opacity-100 transition-all duration-500 easy-in-out'}`}
