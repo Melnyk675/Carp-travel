@@ -157,7 +157,6 @@ img {
   }
 
 
-
    @media screen and (min-width: 480px) {
     .container {
       width: 480px;
@@ -170,13 +169,6 @@ img {
       width: 768px;
       margin: 0 auto;
     }
-  }
-
-  .career::after {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: var(--section-bottom-gradient);
   }
 
   @media screen and (min-width: 1280px) {
@@ -213,6 +205,13 @@ img {
     .career::after {
       display: none;
     }
+  }
+
+  .career::after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--section-bottom-gradient);
   }
 
   .footer-link {

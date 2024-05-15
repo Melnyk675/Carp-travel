@@ -1,5 +1,6 @@
-"use client"
 
+
+import React from "react";
 import { toast } from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import useFormPersist from 'react-hook-form-persist';
@@ -21,7 +22,7 @@ const ContactForm: React.FC = () => {
 
   const onSubmit = (data: FormData) => {
     reset();
-    toast.success(`Thanks, ${data.name}, your message was successfully delivered! You can check out for 24 hours before we come back.`);
+    toast.success(`Thank you, ${data.name}! Your message has been delivered! You can check out within 24 hours before we back.`);
   }
 
   return (

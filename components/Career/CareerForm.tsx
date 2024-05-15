@@ -1,6 +1,7 @@
-"use client";
+
 
 import React from "react";
+import { toast } from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import useFormPersist from 'react-hook-form-persist';
 import { FormData } from "../../types/types";
@@ -19,8 +20,9 @@ const CareerForm: React.FC = () => {
 
   const { description, formContent: { inputs, textarea, policy } } = CareerFormInfo;
 
-  const onSubmit = () => {
+  const onSubmit = (data: FormData) => {
     reset();
+    toast.success(`Thank you, ${data.name}! Your message has been sent! We will contact you within 24 hours.`);
   }
 
   return (

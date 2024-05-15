@@ -22,15 +22,15 @@ const About = () => {
             </div>
 
             <div className='flex flex-col justify-between max-w-[180px] md:max-w-[220px] xl:max-w-[292px] gap-6'>
-              <p className='text'><b>{data.descBold1}</b> {data.desc1}</p>
-              <p className='text'><b>{data.descBold2}</b> {data.desc2}</p>
+              <p className='text'><b>{data.descBold1}</b>{data.desc1}</p>
+              <p className='text'><b>{data.descBold2}</b>{data.desc2}</p>
             </div>
           </div>
 
           <div className='flex flex-col-reverse xl:flex-row md:flex-row xl:justify-between justify-start md:justify-end'>
-            <p className='text md:max-w-[462px] xl:max-w-[605px]'><b>{data.descBold3}</b> {data.desc3}</p>
+            <p className='text md:max-w-[462px] xl:max-w-[605px]'><b>{data.descBold3}</b>{data.desc3}</p>
             <div className='md:hidden xl:flex flex w-full md:w-[180px] xl:w-[296px] justify-end xl:justify-start mb-10 xl:mb-0'>
-              <div className='flex flex-col  w-[180px] lg:w-[296px]'>
+              <div className='flex flex-col w-[180px] lg:w-[296px]'>
                 <p className='text-white text-sm xl:text-lg font-normal leading-5 uppercase text-start'>{data.text1}</p>
                 <p className='text-white text-sm xl:text-lg font-normal leading-5 uppercase text-end'>{data.text2}</p>
                 <p className='text-white text-sm xl:text-lg font-extralight leading-6 text-start tracking-[-0.14px] xl:tracking-[2.1px]'>{data.text3}</p>
