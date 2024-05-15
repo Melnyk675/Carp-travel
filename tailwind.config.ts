@@ -18,15 +18,7 @@ module.exports = {
       backgroundImage: {
         error: "url(/icons/error.svg)",
       },
-    container: {
-      padding: {
-        default: '1.25rem',
-        md: '2rem',
-        xl: '1.5rem',
-        '2xl': '6rem',
-      },
-      center: true,
-    },
+   
     colors: {
       white: '#FFFFFF',
       gray: '#D9D9D9',
@@ -34,6 +26,7 @@ module.exports = {
     },
     fontFamily: {
       serif: ['Inter', 'serif'],
+      karantina: ["Karantina", "system-ui"],
     },
   },
   plugins: [],

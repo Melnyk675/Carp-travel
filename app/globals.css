@@ -14,7 +14,11 @@
 
 html {
   height: 100%;
-  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -45,6 +49,20 @@ h3
   overflow-wrap: break-word;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 100%;
+  width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
 .hero-bg {
     background-image: 
       url('/images/home.png');
@@ -69,7 +87,6 @@ h3
        background-position: center;
       }
 
-     
  .gallery-bg {
     background-color: #001826;
     background-image: 
@@ -168,6 +185,20 @@ h3
       margin: 0 auto;
     }
   
+    @media screen and (min-width: 1440px) {
+      .container {
+        width: 1280px;
+        margin: 0 auto;
+      }
+    }
+    
+    @media screen and (min-width: 1640px) {
+      .container {
+        width: 1440px;
+        margin: 0 auto;
+      }
+    }
+
     .phone-label::after {
       width: 50px;
       font-size: 20px;
@@ -207,10 +238,6 @@ h3
 
 
 @layer utilities {
-  .number {
-    @apply text-[40px] md:text-[66px] xl:text-[98px] font-thin text-white tracking-[-1.6px] md:tracking-[-2.68px] xl:tracking-[-3.92px] uppercase;
-  }
-
   .title {
     @apply text-[40px] md:text-[66px] xl:text-[98px] font-thin text-white tracking-[-1.6px] md:tracking-[-2.68px] xl:tracking-[-3.92px] uppercase;
   }
@@ -231,6 +258,10 @@ h3
 
   .label {
     @apply text-white mb-1 text-xs font-extralight leading-[24px] tracking-[2.4px];
+  }
+
+  .links {
+    @apply no-underline text-[14px] leading-none tracking-[1.4px];
   }
 
   .validation-error {
