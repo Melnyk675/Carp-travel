@@ -26,7 +26,7 @@ const CareerForm: React.FC = () => {
   }
 
   return (
-    <div className='flex flex-col w-[500px]'>
+    <div>
       <p className="ml-auto text-white mb-9 w-[178px] text-sm font-extralight leading-5 md:ml-0 md:mb-7 md:w-[220px] md:text-[12px] md:leading-5 xl:mb-3.5 xl:w-[234px] xl:text-lg xl:leading-6">
         {description}
       </p>

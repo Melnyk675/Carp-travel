@@ -1,6 +1,6 @@
 
 import hero from "@/data/hero.json";
-import HeroButton from "./Hero/HeroButton";
+import HeroButton from "./HeroButton/HeroButton";
 
 const Hero = () => {
 

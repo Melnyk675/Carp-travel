@@ -61,7 +61,7 @@ const Career = () => {
       {isMobile && (
         <section
           id="career"
-          className="career career-bg py-[55px]"
+          className="py-[55px]"
         >
           <div className="container">
             <CareerForm />
